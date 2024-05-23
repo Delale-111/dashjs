@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de Bord Météo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="top-section sortable">
+            <div class="card">
+                <h3>Température actuelle</h3>
+                <canvas id="currentTemperature"></canvas>
+            </div>
+            <div class="card">
+                <h3>Précipitations</h3>
+                <canvas id="precipitationChart"></canvas>
+            </div>
+            <div class="card" id="percentageCard">
+                <h3>Total</h3>
+                <div class="liquid-gauge" id="liquidGauge"></div>
+                <div class="gear-icon">&#9881;</div>
+            </div>
+        </div>
+        <div class="bottom-section sortable">
+            <div class="card">
+                <h3>Prévisions météo</h3>
+                <p id="dayForecast" class="popup">Attendez-vous à un ciel partiellement ensoleillé. La température maximale sera de ...</p>
+                <p id="nightForecast" class="popup">Le ciel sera partiellement nuageux. La température minimale sera de ...</p>
+            </div>
+            <div class="card">
+                <h3>Suggestions pour votre journée</h3>
+                <p class="popup">Parapluie: <span id="umbrella">Inutile</span></p>
+                <p class="popup">Extérieur: <span id="outdoor">Très météo-dépendant</span></p>
+                <p class="popup">Vêtements: <span id="clothes">Veste légère recommandée</span></p>
+                <p class="popup">Vent froid: <span id="coldWind">Sans danger</span></p>
+            </div>
+            <div class="card">
+                <h3>Planificateur mensuel</h3>
+                <canvas id="monthlyChart"></canvas>
+            </div>
+            <div class="sidebar sortable">
+                <div class="indicator-card">
+                    <h3>Température la plus élevée</h3>
+                    <div id="highestTemperature" class="indicator"></div>
+                </div>
+                <div class="indicator-card">
+                    <h3>Temps le plus fréquent</h3>
+                    <div id="mostFrequentWeather" class="indicator"></div>
+                </div>
+                <div class="indicator-card">
+                    <h3>Température moyenne</h3>
+                    <div id="averageTemperature" class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="d3.liquidfillgauge.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
