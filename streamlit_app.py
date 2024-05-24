@@ -15,6 +15,4 @@ thread = threading.Thread(target=start_server)
 thread.start()
 
 process_data()
-
-st.title("Tableau de Bord Météo")
 st.markdown('<iframe src="http://localhost:8000" width="200%" height="800"></iframe>', unsafe_allow_html=True)
